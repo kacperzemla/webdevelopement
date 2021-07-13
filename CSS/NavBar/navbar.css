@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins;
+    -webkit-background-size: cover;
+    background-image: url(2.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+header{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+}
+
+.loglo{
+    cursor: pointer;
+}
+
+.nav-area{
+    list-style: none;
+}
+
+.nav-area li{
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.nav-area li a{
+    transition: .3s;
+    color: #fff;
+}
+
+.nav-area li a:hover{
+    color: #d22938;
+}
+
+.btn-area{
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #d22938;
+    transition: .3s;
+}
+
+.btn-area:hover{
+    box-shadow: 3px 3px 2px 2px #d2293777;
+    transform: scale(1.1);
+}
+
+h1{
+    color: #fff;
+    font-family: poppins;
+}

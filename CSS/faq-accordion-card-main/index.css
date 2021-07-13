@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    /* #### Text */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    
+    /* #### Gradient */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    /* #### Text */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    /* #### Dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(0deg,  var(--Soft-blue) 0%, var(--Soft-violet) 100%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    font-family: 'Kumbh Sans';
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+    background: white;
+    margin: 2rem auto;
+    border-radius: 20px;
+    display: flex;
+    min-height: 500px;
+    width: 900px;
+    position: relative;
+}
+
+.container > div{
+    flex: 1;
+    width: 100%;
+}
+
+.image{
+    position: relative;
+    background: url(images/bg-pattern-desktop.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    overflow: hidden;
+}
+
+.container > img{
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 190px;
+    left: -90px;
+    z-index: 2;
+}
+
+.image img:nth-child(1){
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    margin-left: -70px;
+}
+.questions{
+    margin-left: 2rem;
+    padding: 2rem 3rem 0 0;
+}
+
+.question{
+    margin-top: 1rem;
+}
+.question p{
+    position: relative;
+}
+
+.question  img{
+    width: 0.8rem;
+    position: absolute;
+    right: 0.2rem;
+    cursor: pointer;
+}
+
+.question__answer{
+    display: none;
+}
+
+hr {
+    border: 1px solid var(--Light-grayish-blue);
+}
+
+@media (max-width: 900px){
+    body{
+        align-items: center;
+        justify-items: start;
+        height: 100vh;
+        margin-top: 5rem;
+        width: 100%;
+    }
+    .container{
+        flex-direction: column;
+        width: 380px;
+        margin: 2rem 0;
+    }
+    
+    .image{
+        display: flex;
+        overflow: initial;
+        background: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 300px;
+        flex: 2;
+        padding-bottom: 10rem;
+    }
+
+    .container > img{
+        top: -50px;
+        left: 40px;
+        max-width: 110px;
+    }
+
+    .image img:nth-child(1){
+        max-width: 300px;
+        position: absolute;
+        bottom: 70px;
+        left: 110px;
+        /* align-self: center; */
+        /* justify-self: center; */
+    }
+}

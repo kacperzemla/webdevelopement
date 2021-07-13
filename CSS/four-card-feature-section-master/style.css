@@ -1,0 +1,113 @@
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+   
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    max-width: 1440px;
+    margin-top: 3rem;
+    margin: auto;
+    text-align: center;
+}
+
+.container_text{
+    color: var(--Grayish-Blue);
+    max-width: calc(1440px/2);
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+span{
+    display: block;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+}
+
+.container_item{
+    width: 25%;
+    box-shadow: 0px 10px 20px var(--Grayish-Blue);
+    margin: 20px 5px;
+    height: 250px;
+    display: inline-block;
+    text-align: left;
+    padding: 15px;
+    padding-right: 30px;
+    color: var(--Grayish-Blue);
+    position: relative;
+    border-radius: 5px;
+    border-top: 5px solid red;
+    background: white;
+}
+
+h2{
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 5px;
+}
+
+.container_item-img{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.container_item:nth-of-type(1){ 
+    border-color: var(--Cyan);
+    transform: translateY(50%);
+}
+
+.container_item:nth-of-type(2){
+    border-color: var(--Red);
+}
+
+.container_item:nth-of-type(3){
+    border-color: var(--Blue);
+    transform: translateY(50%);
+}
+
+.container_item:nth-of-type(4){
+    border-color: var(--Orange);
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 30px;
+    }
+    .container_text{
+        margin-bottom: 10px;
+    }
+    .container_item{
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 30px;
+    }
+    .container_item:nth-of-type(1){ 
+        transform: translateY(0%);
+    }
+
+    .container_item:nth-of-type(3){
+        transform: translateY(0%);
+    }
+}

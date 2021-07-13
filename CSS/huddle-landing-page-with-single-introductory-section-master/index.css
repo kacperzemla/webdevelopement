@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url("images/bg-desktop.svg") fixed;
+    background-color: var(--Violet);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    display: flex;
+}
+
+.container > div{
+    flex: 1;
+}
+
+.images{
+    margin: 4rem 3rem 2rem 4rem;
+}
+.images__logo{
+    margin-bottom: 3rem;
+}
+
+.register{
+    color: #fff;
+    margin-top: 13rem;
+    margin-right: 4rem;
+    position: relative;
+}
+
+.register__header{
+    font-family: 'Poppins', sans-serif;
+}
+
+.register__paragraph{
+    font-size: 1rem;
+}
+
+.register__button{
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    border: none;
+    color: var(--Violet);
+    font-size: 1.2rem;
+    box-shadow: 1px 3px 3px 2px hsla(257, 45%, 37%, 0.692);
+    transition: 0.2s ease;
+}
+
+.register__button:hover{
+    background:  var(--Soft-Magenta);
+    color: white;
+}
+
+.icons i{
+    margin-right: 0.3rem;
+    font-size: 1.3em;
+    width: 1.7em;
+    text-align: center;
+    line-height: 1.6em;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 0.8em; /* or 50% width & line-height */
+}
+
+.icons{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0;
+}
+
+.icons i:hover{
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+}
+
+@media (max-width: 1000px){
+    body{
+        background-image: url('images/bg-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .container{
+        flex-direction: column;
+    }
+
+    .images{
+        margin: 3rem 4rem;
+    }
+
+    .images__logo{
+        width: 50vw;
+    }
+
+    .images__main{
+        width: 100%;
+    }
+
+    .register{
+        margin: 1rem 4rem;
+        text-align: center;
+    }
+
+    .register__button{
+        margin-top: 2rem;
+        width: 60%;
+    }
+
+    .icons{
+        position: initial;
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,100 @@
+::root{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('pexels-pixabay-262367.jpg');
+    background-size: cover;
+    font-family: poppins;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    padding: 20px 70px;
+}
+
+
+.navbar-item{
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar-link:after{
+    position: absolute;
+    background: white;
+    content: "";
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    transition: 0.3s ease;
+}
+
+.navbar-link:hover:after{
+    width: 100%;
+    left: 0;
+}
+
+.main{ /*  centrowanie diva */
+    color: white;
+    font-weight: 600;
+    font-size: 4rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main p{
+    margin: 10px auto;
+}
+
+.main-button{
+    position: relative;
+    width: 200px;
+    font-size: 1.5rem;
+    color: white;
+    background: transparent;
+    border-radius: 25px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #fff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.main-button span{
+    background: rgb(73, 73, 73);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    border-radius: 25px;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.main-button:hover span{
+    width: 100%;
+}
+
+.main-button:hover{
+    border: none;
+}
