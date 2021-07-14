@@ -66,6 +66,22 @@ body{
     outline: none;
 }
 
+.email_error{
+    position: relative;
+    animation: shake .2s linear;
+    animation-iteration-count: 3;
+    
+}
+
+@keyframes shake {
+    0% { left: -3px; }
+    100% { right: -3px; }
+}
+
+.email_error::placeholder{
+    color: var(--Light-Red) !important;
+}
+
 form{
     margin-top: 2rem;
 }
@@ -122,6 +138,12 @@ form{
     color:hsl(0, 0%, 59%);
     margin: 2rem 0;
     font-size: 1.2rem;
+}
+
+#error{
+    color: var(--Light-Red);
+    font-size: 1rem;
+    font-style: italic;
 }
 
 @media (max-width: 900px){
