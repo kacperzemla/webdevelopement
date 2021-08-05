@@ -43,7 +43,7 @@
   </div>
 
   <script>
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait = 5, immediate = true) {  // this function improves browser performance, because the event doesn`t fire so often thanks to it
       var timeout;
       return function() {
         var context = this, args = arguments;
@@ -58,6 +58,32 @@
       };
     }
 
+    
+    const sliderImages = document.querySelectorAll(".slide-in")
+
+    function checkSlide(e){
+      
+      sliderImages.forEach(sliderImage => {
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2; //halfway through the image 
+        const imageBottom = sliderImage.offsetTop + sliderImage.height; // offsetTop gives us how far the top of the image is;
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPast = window.scrollY < imageBottom;
+        console.log('Window.scrollY' + window.scrollY)
+        console.log('SlideInAt:' + slideInAt)
+        console.log('ImageBottom: ' + imageBottom)
+        console.log('Slider image offsettop: ' + sliderImage.offsetTop)
+        console.log('Window Inner height: ' + window.innerHeight)
+        console.log('-----------------------------------------')
+        if(isHalfShown && isNotScrolledPast){
+          sliderImage.classList.add('active');
+        } else{
+          sliderImage.classList.remove('active')
+        }
+      })
+      console.log('.....................')
+    }
+
+    window.addEventListener('scroll', debounce(checkSlide))
   </script>
 
   <style>
