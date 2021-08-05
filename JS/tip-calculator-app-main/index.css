@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root{
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-lighter: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan-lighter: hsl(189, 41%, 93%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--Light-grayish-cyan);
+    font-family: 'Space Mono', sans-serif;
+}
+
+.name{
+    margin-bottom: 2rem;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator{
+    display: flex;
+    margin-bottom: 5rem;
+    flex-direction: row;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 500px;
+}
+
+.calculator__select{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    
+}
+
+.calculator__select > div{
+    background: var(--Very-dark-cyan);
+    color: white;
+    display: grid;
+    place-items: center;
+    min-width: 6rem;
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.calculator__select > input {
+    text-align: center;
+    background: var(--Light-grayish-cyan-lighter);
+    border: none;
+    border-radius: 5px;
+    max-width: 7rem;
+    font-size: 1.5rem;
+}
+
+.calculator__select > input::placeholder{
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    
+    
+}
+
+label, p{
+    color: var(--Dark-grayish-cyan);
+    display: block;
+    font-weight: 700;
+}
+
+.calculator__label-number{
+    margin-top: 1rem;
+    
+}
+
+.calculator__data > input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: right;
+    color:hsl(183, 100%, 15%);
+    font-size: 24px;
+    /* background: url("images/icon-person.svg") no-repeat 5px 5px, var(--Light-grayish-cyan-lighter); */
+    background-position: 15px;
+    width: 100%;
+}
+
+.calculator__data > input::placeholder{
+    text-align: right;
+    color: var(--Very-dark-cyan);
+}
+
+.calculator__input-bill{
+    background: url("images/icon-dollar.svg")  no-repeat 5px 5px, var(--Light-grayish-cyan-lighter);
+}
+
+.calculator__input-number{
+    background: url("images/icon-person.svg") no-repeat 5px 5px, var(--Light-grayish-cyan-lighter);
+}
