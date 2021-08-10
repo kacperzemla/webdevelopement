@@ -27,17 +27,21 @@
   <img src="images/logo.svg" class="name">
   <div class="calculator">
     <div class="calculator__data">
-      <label class="calculator__label-bill">Bill</label>
-      <input class="calculator__input-bill" placeholder="0">
+      <label class="calculator__label-bill">
+        <p>Bill</p>
+        <p class="error">sd</p>
+      </label>
+      <input class="calculator__input-bill" placeholder="0" type="number" min="0" id="bill">
       <p>Select Tip %</p>
+
       <div class="calculator__select">
 
-        <div>5%</div>
-        <div>10%</div>
-        <div>15%</div>
-        <div>25%</div>
-        <div>50%</div>
-        <input placeholder="Custom">
+        <div id="percent">5%</div>
+        <div id="percent">10%</div>
+        <div id="percent">15%</div>
+        <div id="percent">25%</div>
+        <div id="percent">50%</div>
+        <input placeholder="Custom" type="number" min="0">
       </div>
 
 
@@ -45,19 +49,34 @@
 
 
 
-      <label class="calculator__label-number">Number of People</label>
-      <input class="calculator__input-number" placeholder="0">
+      <label class="calculator__label-number">
+        <p>Number of People</p>
+        <p class="error">sd</p>
+      </label>
+      <input class="calculator__input-number" placeholder="0" type="number" min="0">
     </div>
     <div class="calculator__amount">
 
 
-      Tip Amount
-      / person
+      <div>
+        <div class="calculator__total">
+          <p class="total">Tip Amount<br>
+            <span>/ person</span>
+          </p>
+          <p class="result">$0.00</p>
+        </div>
 
-      Total
-      / person
+        <div class="calculator__total">
+          <p class="total">Total<br>
+            <span>/ person</span>
+          </p>
+          <p class="result">$0.00</p>
+        </div>
+      </div>
 
-      Reset</div>
+
+      <button class="calculator__button">Reset</button>
+    </div>
   </div>
 
 
