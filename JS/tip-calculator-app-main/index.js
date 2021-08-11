@@ -29,6 +29,7 @@ reset.addEventListener("click", function(){
     errors[1].style.display = 'none'
     result.innerHTML = '$0.00'
     resultTotal.innerHTML = '$0.00'
+    customInput.value = ''
 })
 
 
