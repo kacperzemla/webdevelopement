@@ -80,6 +80,7 @@ body{
     color: var(--Dark-grayish-cyan);
     font-weight: 700;
     font-size: 1.3rem;
+    text-align: right;
 }
 
 .calculator__select > input:focus{
@@ -88,7 +89,7 @@ body{
 }
 
 .calculator__data .error{
-    color: red;
+    color: rgb(253, 112, 112);
     display: none;
 }
 
