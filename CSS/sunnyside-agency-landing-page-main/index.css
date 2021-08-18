@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+:root{
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%); /* graphic design text*/
+    --Dark-blue: hsl(198, 62%, 26%); /* photography text */
+    --Dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', 'sans-serif';
+    font-size: 18px;
+}
+
+.main{
+    background: url('images/mobile/image-header.jpg');
+    background-size: cover;
+    background-position: center 100%;
+    height: 450px;
+    text-align: center;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    align-items: center;
+}
+
+.logo{
+    padding: 5px;
+}
+
+.navigation__links{
+    display: none;
+    list-style: none;
+    align-items: center;
+}
+
+.navigation__links li{
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.navigation__links button{
+    border: none;
+    padding: 10px 1.5rem;
+    color: black;
+    border-radius: 20px;
+    background: #fff;
+    font-weight: 900;
+    font-family: 'Fraunces';
+    text-transform: uppercase;
+
+}
+
+.navigation__text{
+    color: #fff;
+    font-family: 'Fraunces', 'sans-serif';
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.main__arrow-down{
+    height: 4rem;
+}
+
+.context{
+    text-align: center;
+}
+
+.context img{
+    width: 100%;
+}
+
+.context__header{
+    font-size: 2.5rem;
+    font-family: 'Fraunces', sans-serif;
+    padding: 0 0.7rem;
+    font-weight: 900;
+}
+
+.context__paragraph{
+    color: var(--Dark-grayish-blue);
+    padding: 0 2rem;
+}
+.context__link{
+    position: relative;
+    text-transform: uppercase;
+    font-family: 'Fraunces';
+    font-weight: 900;
+}
+
+.context__link::after{
+    content: '';
+    display: block;
+    height: 10px;
+    width: 8em;
+    position: absolute;
+    bottom: -3px;
+    left: calc(50% - 4em);
+    background-color: hsla(51, 100%, 49%, 0.637);
+    z-index: -1;
+    border-radius: 100px;
+}
+
+.red::after{
+    background-color: hsla(7, 99%, 70%, 0.562);
+}
+
+.graphic{
+    background: url('images/mobile/image-graphic-design.jpg');
+    width: 100%;
+    background-size: cover;
+    height: 35rem;
+    position: relative;
+    text-align: center;
+}
+
+.graphic__text{
+    position: absolute;
+    bottom: 0;
+    padding: 0 1rem 2rem 1rem;
+    color: var(--Dark-desaturated-cyan);
+}
+
+
+.graphic__header{
+    font-family: 'Fraunces';
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.photography{
+    background-image: url('images/mobile/image-photography.jpg');
+}
+
+.photography .graphic__text{
+    color:hsl(198, 62%, 26%) ;
+}
+
+.clients{
+    margin-top: 3rem;
+    text-align: center; 
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.clients__testimonial{
+    margin-bottom: 3rem;
+}
+
+.clients__header{
+    text-transform: uppercase;
+    font-family: 'Fraunces';
+    color:var(--Grayish-blue);
+    margin-bottom: 3rem;
+}
+
+.clients img{
+    border-radius: 50%;
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.clients p{
+    color: var(--Very-dark-grayish-blue);
+    
+}
+
+.clients__name{
+    font-family: 'Fraunces';
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.clients span{
+    color: var(--Grayish-blue);
+    font-size: 1rem;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery div{
+    width: 100%;
+    height: 50vw;
+}
+
+.milkbottles{
+    background-image: url('images/mobile/image-gallery-milkbottles.jpg');
+}
+
+.cup{
+    background: url('images/mobile/image-gallery-orange.jpg');
+}
+
+.icecream{
+    background: url('images/mobile/image-gallery-cone.jpg');
+}
+
+.sugar{
+    background: url('images/mobile/image-gallery-sugar-cubes.jpg');
+}
+
+.milkbottles, .cup, .icecream, .sugar{ 
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
