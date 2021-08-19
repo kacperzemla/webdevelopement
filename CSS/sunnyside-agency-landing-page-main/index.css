@@ -81,16 +81,17 @@ body{
 
 .context{
     text-align: center;
+    padding: 2rem 0;
 }
 
-.context img{
+.puzzles img{
     width: 100%;
 }
 
 .context__header{
     font-size: 2.5rem;
     font-family: 'Fraunces', sans-serif;
-    padding: 0 0.7rem;
+    padding: 0 3rem;
     font-weight: 900;
 }
 
@@ -129,6 +130,7 @@ body{
     height: 35rem;
     position: relative;
     text-align: center;
+  
 }
 
 .graphic__text{
@@ -255,3 +257,135 @@ body{
     gap: 1rem;
 }
 
+@media (min-width: 600px){
+    .puzzles .graphic{
+        background-image: url('images/desktop/image-graphic-design.jpg');
+        background-position: top center;
+    }
+
+    .puzzles .photography{
+        background-image: url('images/desktop/image-photography.jpg');
+        background-position: top center;
+    }
+}
+
+@media (min-width: 800px){
+    .main{
+        height: 480px;
+        background-image: url('images/desktop/image-header.jpg');
+    }
+    .navigation__links{
+        display: flex;
+    }
+
+    .hamburger{
+        display: none;
+    }
+    .puzzles{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .puzzles .context{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .puzzles .graphic{
+        background-image: url('images/desktop/image-graphic-design.jpg');
+    }
+
+    .puzzles .photography{
+        background-image: url('images/desktop/image-photography.jpg');
+    }
+
+    .puzzles img:nth-child(1){
+        order: 1;
+        height: 100%;
+    }
+
+    .puzzles .context:nth-child(2){
+        order: 0;
+    }
+
+    .puzzles  img:nth-child(3){
+        order: 2;
+        height: 100%;
+    }
+
+    .puzzles .context:nth-child(4){
+        order: 3;
+    }
+
+    .puzzles .graphic:nth-child(5){
+        order: 4;
+        background-position: top center;
+    }
+
+    .puzzles .graphic:nth-child(6){
+        order: 5;
+        background-position: top center;
+    }
+
+    .clients{
+        display: grid;
+        grid-template-areas: 
+        'header header header'
+        'clients1 clients2 clients3'
+        ;
+        gap: 0 2rem;
+    }
+
+    .clients__header{
+        grid-area: header;
+    }
+
+    .gallery{
+        display: flex;
+    }
+
+    .gallery div{
+        height: 400px;
+        width: 25%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .milkbottles{
+        background: url('images/desktop/image-gallery-milkbottles.jpg')
+    }
+
+    .cup{
+        background: url('images/desktop/image-gallery-orange.jpg');
+    }
+
+    .icecream{
+        background: url('images/desktop/image-gallery-cone.jpg');
+    }
+    
+    .sugar{
+        background: url('images/desktop/image-gallery-sugarcubes.jpg');
+    }
+
+    .informations__list{
+        justify-content: center;
+    }
+
+    .informations__list-item{
+        margin-right: 2rem;
+    }
+
+}
+
+@media (min-width: 900px){
+    .main{
+        height: 510px;
+    }
+}
+
+@media (min-width: 1200px){
+    .main{
+        height: 610px;
+    }
+}
