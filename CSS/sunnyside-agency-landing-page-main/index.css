@@ -66,6 +66,11 @@ body{
 
 }
 
+.navigation__links button:hover{
+    color: white;
+    background-color: hsl(198, 100%, 75%);
+}
+
 .navigation__text{
     color: #fff;
     font-family: 'Fraunces', 'sans-serif';
@@ -114,13 +119,34 @@ body{
     position: absolute;
     bottom: -3px;
     left: calc(50% - 4em);
-    background-color: hsla(51, 100%, 49%, 0.637);
+    background-color: hsla(51, 100%, 49%, 0.308);
+    z-index: -1;
+    border-radius: 100px;
+}
+
+.context__link:hover{
+    cursor: pointer;
+}
+
+.context__link:hover::after{
+    content: '';
+    display: block;
+    height: 10px;
+    width: 8em;
+    position: absolute;
+    bottom: -3px;
+    left: calc(50% - 4em);
+    background-color: hsl(51, 100%, 49%);
     z-index: -1;
     border-radius: 100px;
 }
 
 .red::after{
     background-color: hsla(7, 99%, 70%, 0.562);
+}
+
+.red:hover::after{
+    background-color: hsl(7, 99%, 70%);
 }
 
 .graphic{
@@ -250,11 +276,21 @@ body{
     font-size: 1rem;
 }
 
+.informations__list-item:hover{
+    color: #fff;
+}
+
 .footer__icons{
     margin-top: 4rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+
+.footer__icons img:hover{
+    filter: brightness(0) invert(1);
+    /* fill: #fff !important; */
+    cursor: pointer;
 }
 
 @media (min-width: 600px){
