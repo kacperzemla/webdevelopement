@@ -37,6 +37,7 @@ body{
     justify-content: space-between;
     padding: 1rem 1rem;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -44,10 +45,15 @@ body{
 }
 
 .navigation__links{
-    display: none;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
     list-style: none;
     align-items: center;
 }
+
+
 
 .navigation__links li{
     margin-right: 1rem;
@@ -71,6 +77,43 @@ body{
     background-color: hsl(198, 100%, 75%);
 }
 
+.navigation__links.show{
+
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 70px;
+    background: #fff;
+    width: calc(100% - 2rem);
+    margin: auto;
+    height: auto;
+    padding: 2rem 0;
+    opacity: 1;
+
+}
+
+
+.navigation__links.show li{
+    color: rgb(94, 94, 94);
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.navigation__links.show li:hover{
+    color:hsl(198, 100%, 75%);
+    cursor: pointer;
+}
+
+.navigation__links.show button{
+    background: rgb(255, 225, 54);
+}
+
+.navigation__links.show button:hover{
+    background: hsl(198, 100%, 75%);
+    cursor: pointer;
+}
+
 .navigation__text{
     color: #fff;
     font-family: 'Fraunces', 'sans-serif';
@@ -79,6 +122,11 @@ body{
     letter-spacing: 5px;
 
 }
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
 
 .main__arrow-down{
     height: 4rem;
@@ -258,11 +306,11 @@ body{
 .footer{
     background:hsla(168, 66%, 41%, 0.5);
     text-align: center;
-    padding: 2rem 0 5rem 0;
+    padding: 5rem 0;
 }
 
 .footer__logo{
-    color: var(--Dark-desaturated-cyan);
+    filter: invert(27%) sepia(38%) saturate(482%) hue-rotate(116deg) brightness(60%) contrast(98%);
     margin-top: 0;
     font-weight: bold;
     font-size: 2rem;
@@ -410,6 +458,11 @@ body{
 
     .informations__list-item{
         margin-right: 2rem;
+    }
+
+    .navigation__links{
+        opacity: 1;
+        height: auto;
     }
 
 }
